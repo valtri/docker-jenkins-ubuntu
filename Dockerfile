@@ -1,7 +1,10 @@
-FROM ubuntu:16.04
+FROM ubuntu:14.04
 MAINTAINER František Dvořák <valtri@civ.zcu.cz>
 
 RUN apt-get update \
+ && apt-get install -y --no-install-recommends software-properties-common \
+ && add-apt-repository -y ppa:openjdk-r/ppa \
+ && apt-get update \
  && apt-get install -y --no-install-recommends openjdk-8-jre-headless openssh-server sudo \
  && rm -rf /var/lib/apt/lists/*
 
