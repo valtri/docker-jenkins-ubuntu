@@ -5,7 +5,7 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends software-properties-common \
  && add-apt-repository -y ppa:openjdk-r/ppa \
  && apt-get update \
- && apt-get install -y --no-install-recommends openjdk-8-jre-headless openssh-server sudo \
+ && apt-get install -y --no-install-recommends git openjdk-8-jre-headless openssh-server sudo \
  && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /var/run/sshd \
